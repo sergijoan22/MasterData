@@ -6,7 +6,7 @@ Este es el repositorio de **Sergi Joan Sastre** con el contenido del *Master en 
 
 - [Introducción](Apuntes/Introducción.md)	[*11 sep 21*]
 - [Linux](Apuntes/Linux.md)	[*17 sep 21*]
-- [Google Cloud](Apuntes/Google Cloud.md)	[*17 sep 21*]
+- [Google Cloud](Apuntes/Google_Cloud.md)	[*17 sep 21*]
 - [GIT](Apuntes/Git.md)	[*18 sep 21*]
 
 ## Contacto

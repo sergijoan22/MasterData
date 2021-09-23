@@ -55,21 +55,33 @@ El comando **ls** muestra el contenido de un directorio, es decir, las carpetas 
 
 Para poner a la vez varios parámetros, se puede también poner un único signo - y todas las letras de los parámetros que queramos.
 
-`ls`    `ls -l`    `ls -lt`    `ls -l -t`
+`ls`
 
-Sobretodo en caso de haber muchos ficheros, podemos usar el * que sustituye cualquier cadena de caracteres.
+`ls -l`
 
-​    `ls pa`    `ls *.txt`
+`ls -lt`
+
+`ls -l -t`
+
+Sobre todo en caso de haber muchos ficheros, podemos usar el * que sustituye cualquier cadena de caracteres.
+
+`ls pa`
+
+`ls *.txt`
 
 También se pued ejecutar el comando sobre un directorio que esté dentro del que nos encontremos actualmente. Por ejemplo, dentro del directorio raíz podemos hacer:
 
-​    `ls bin`    `ls root`
+`ls bin`
+
+`ls root`
 
 ### Obtener ayuda de un comando
 
 Para obtener ayuda acerca del uso de un comando, basta con escribir **--help** luego de este para que se imprima la ayuda necesaria.
 
-`ls --help`    `whoami --help`
+`ls --help`
+
+`whoami --help`
 
 ### Historial de comandos usados
 
@@ -81,59 +93,89 @@ El comando **history** muestra por orden los comandos que se han usado.
 
 El comando **cd** sirve para subir, bajar o saltar de directorio.
 
-`cd ..`    `cd /root`    `cd root`    `cd ../bin`
+`cd ..`
+
+`cd /root`
+
+`cd root`
+
+`cd ../bin`
 
 ### Crear un fichero
 
 El comando **touch** crea un fichero. Se puede crear donde queramos independientemente de donde estemos.
 
-​    `touch /root/prueba.txt`    `touch ../home/archprueba.py`    `touch pr3.txt`
+`touch /root/prueba.txt`
+
+`touch ../home/archprueba.py`
+
+`touch pr3.txt`
 
 ### Borrar un fichero
 
 El comando rm borra un fichero. Usando * se pueden borrar varios a la vez. No hay comando de deshacer así que hay que estar seguros.
 
- `rm /root/prueba.txt`    `rm ../home/*.py`    `rm \*prueba*`
+`rm /root/prueba.txt`
+
+`rm ../home/*.py`
+
+`rm \*prueba*`
 
 ### Crear una carpeta
 
 El comando **mkdir** crea una carpeta.
 
-  `mkdir carpeta2`    `mkdir ../home/carpeta3`
+`mkdir carpeta2`
+
+`mkdir ../home/carpeta3`
 
 ### Borrar una carpeta
 
 El comando **rmdir** permite eliminar directorios solo si están vacíos. El comando **rm** permite eliminar el directorio y todo el contenido que haya dentro. Para ello, hay que añadir los parámetro **rf**.
 
-`rmdir carpeta2`    `rm -rf ../carpeta1`    `rm -rf ../carpeta*`
+`rmdir carpeta2`
+
+`rm -rf ../carpeta1`
+
+`rm -rf ../carpeta*`
 
 ### Copiar archivo o carpeta
 
 El comando **cp** permite copiar un archivo o carpeta. Para ello, se especifica la ruta de lo que queremos copiar y la ruta de donde lo queremos copiar. Se puede elegir si cambiar el nombre del archivo, y si ya existe se sobrescribe.
 
-  `cp carpeta1/hola.txt carpeta2`      `cp carpeta1/hola.txt carpeta2/quepasa.txt`
+`cp carpeta1/hola.txt carpeta2`
+
+`cp carpeta1/hola.txt carpeta2/quepasa.txt`
 
 ### Mover archivo o carpeta
 
 El comando **mv** funciona igual que el comando de copiar, pero en este caso el archivo de origen se elimina. Usando el dos casos el mismo directorio, se puede usar el comando para cambiar de nombre el archivo.
 
-  `mv carpeta1/hola.txt carpeta2`      `mv hola.txt adios.txt`
+`mv carpeta1/hola.txt carpeta2`
+
+`mv hola.txt adios.txt`
 
 ### Escribir en un archivo
 
 El comando **echo** permite escribir en un archivo. Si no se especifica ningún archivo, devuelve lo escrito en la pantalla.
 
-`echo Hola que tal > carpeta/hola.txt`     `echo hola.txt adios.txt`
+`echo Hola que tal > carpeta/hola.txt` 
+
+`echo hola.txt adios.txt`
 
 Otra opción más completa es el comando **vi** que abre el archivo en una especie de editor de textos. Una vez hemos editado el archivo, pulsamos ESC y escribimos **:q** para salir, **:w** para guardar y **:wq** para ambas. Otro editor similar se obtiene con el comando **nano**.
 
-`vi hola.txt`    `nano hola.txt`
+`vi hola.txt`
+
+`nano hola.txt`
 
 ### Mostrar el contenido de un archivo
 
 El comando **cat** muestra el contenido de un archivo pero sin ejecutarlo. En caso de que el archivo tengo muchas líneas, el comando **tail** permite mostrar solo las últimas 10 líneas.
 
-`cat carpeta3/hola.txt`    `tail hola.txt`
+`cat carpeta3/hola.txt`
+
+`tail hola.txt`
 
 ### Permisos de archivos
 
@@ -149,7 +191,9 @@ El comando **chmod** permite cambiar los permisos de un fichero. El primer argum
 
 En los casos que no seamos el administrador usando un terminal, habrá ciertas ordenes que no podremos ejecutar. El comando **sudo** permite obtener estos permisos hasta que se anule con el comando **exit**.
 
-`sudo su`    `exit`
+`sudo su`
+
+`exit`
 
 Otra opción es escribir **sudo** al principio de un comando, que ejecutará como administrador ese único comando.
 
@@ -192,3 +236,124 @@ Para conocer la versión de un programa, se debe escribir **--version** después
 ## Bash
 
 Bash es un lenguaje que permite programar en la terminal y que se puede practicar con un [compilador online](https://www.onlinegdb.com/online_bash_shell).
+
+## Ejercicio Linux 1
+
+#### En root, crear hola.txt
+
+`cd/root`
+
+`touch hola.txt`
+
+#### Escribir número en archivo
+
+`echo 54894 > hola.txt`
+
+#### Crear directorio curso
+
+`mkdir curso`
+
+#### Mover hola.txt a curso
+
+`mv hola.txt curso`
+
+#### Listar directorios
+
+`ls -l`
+
+`ls -l curso`
+
+## Ejercicio Linux 2
+
+#### De la máquina virtual creada en Google Cloud, ¿Cuáles son los ficheros y directorios presentes en el directorio raíz?
+
+`cd /`
+
+`ls`
+
+#### ¿Cuáles son todos los archivos presentes en nuestro directorio de usuario?
+
+`cd home/sergi98lapunta`
+
+`ls -l`
+
+#### Crea un directorio llamado experimento en nuestro directorio de usuario.
+
+`mkdir experimento`
+
+#### Crea con touch los archivos datos1.txt y datos2.txt dentro del directorio experimento.
+
+`cd experimento`
+
+`touch datos1.txt`
+
+`touch datos2.txt`
+
+#### Vuelve al directorio principal de tu usuario y desde allí lista los archivos presentes en el directorio experimento usando rutas absolutas y relativas.
+
+`cd ..`
+
+`ls -l /home/sergi98lapunta`
+
+`ls -l`
+
+#### Borra todos los archivos que contengan un 2 en el directorio experimento.
+
+`cd experimento`
+
+`rm *2*`
+
+#### Copia el directorio experimento a un nuevo directorio llamado exp_seguridad.
+
+`cd ..`
+
+`cp -r experimento exp_seguridad `
+
+#### Borra el directorio experimento.
+
+`rm -rf experimento`
+
+#### Renombra el directorio exp_seguridad a experimento.
+
+`mv exp_seguridad experimento`
+
+#### Copia el fichero /etc/passwd al directorio experimento.
+
+`cp /etc/passwd /home/sergi98lapunta/experimento`
+
+#### Copia el fichero /etc/passwd al directorio experimento con el nombre usuarios.txt y poner el archivo como solo lectura.
+
+`cp /etc/passwd /home/sergi98lapunta/experimento/usuarios.txt`
+
+`chmod 444 experimento/usuarios.txt`
+
+## Ejercicio Linux 3
+
+#### En la máquina virtual creada en Google Cloud instala Git.
+
+`sudo apt update`
+
+`sudo apt-get install git`
+
+#### Crea un archivo script.h con permisos de ejecución.
+
+`cd /home/sergi98lapunta`
+
+`touch script.sh`
+
+#### Añade un código Bash en el archivo que calcule y devuelva 5\*1+5\*2+5\*3...5\*100
+
+````bash
+#!/bin/bash
+a=5
+b=0
+for i in 'seq 1 100';
+do
+	b=$(( $b + $(( $i * $a))))
+done
+echo $b
+````
+
+Una vez creado el archivo, para ejecutarlo se usa el comando sh.
+
+`sh script.sh`
